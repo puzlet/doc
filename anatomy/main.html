@@ -3,26 +3,39 @@
   <h2>Anatomy of a blab</h2>
 
   Blab is short for web laboratory, like blog is short for web log. A
-  blab is a short(ish) presentation, usually involving computation in
-  the STEM fields (Science, Technology, Engineering, Mathematics).
+  blab is a short(ish) web page, often involving computation in the
+  STEM fields (Science, Technology, Engineering, Mathematics).
 
   The computation is done locally, in the browser, via a
   [http://puzlet.org/doc/import-export/, special brew of
   CoffeeScript].
 
   Behind the scenes, a blab is set of files managed and served by
-  GitHub (although entirely local operation is perfectly fine). The
-  puzlet.js application processes and presents the files.
+  GitHub (although entirely local operation is fine). The
+  [https://github.com/puzlet, puzlet.js] application processes and
+  presents the files.
 
   The important parts of a blab are:
 
-  <h3>file: resources.json</h3>
+  <h4>resources.json</h4>
   
-  A list of resources to be processed by the puzlet.js app. 
+  A list of resources to be processed by the puzlet.js app. For example:
 
-  <h3>var: $blab</h3>
+  <ul>
+    <li>local .html, .css, .js, .json, .coffee files;</li>
+    <li>.js files from elsewhere on the web;</li>
+    <li>.coffee files from elsewhere (subsequently compiled);</li>
+    <li>GitHub hosted files (via GitHub's API).</li>
+  </ul>
 
-  A global variable uses to pass data and functions between javascript
-  files.
+  <h4>blab namespace</h4>
+
+  The $blab variable is used as a global namespace to pass variables
+  between javascript TBD.
+
+  <h4>index.html</h4>
+
+  Every blab has an (often simple) index.html to call the puzlet.js
+  app.
 
 </div>
